@@ -1,4 +1,4 @@
-accounting
-==========
+movoco
+======
 
-Andy Mmon
+A lightweight MVC framework loosely based on CodeIgniter, with a MongoDB model included
