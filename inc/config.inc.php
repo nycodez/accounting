@@ -7,25 +7,25 @@ $modelMapping = Array
  'default' => 'default',
  'splash' => 'splash',
 
- 'clients' => 'entity',
- 'vendosr' => 'entity',
- 'users' => 'entity',
- 'contacts' => 'entity',
+ 'client' => 'entity',
+ 'vendor' => 'entity',
+ 'user' => 'entity',
+ 'contact' => 'entity',
 
  'record' => 'record',
 
  'management' => 'management',
 
- 'invoices' => 'record',
+ 'invoice' => 'record',
  'invoicePayment' => 'record',
- 'bills' => 'record',
+ 'bill' => 'record',
  'billPayment' => 'record',
- 'events' => 'record',
- 'calls' => 'record',
- 'documents' => 'record',
+ 'event' => 'record',
+ 'call' => 'record',
+ 'document' => 'record',
 
- 'products' => 'record',
- 'reports' => 'record',
+ 'product' => 'record',
+ 'report' => 'record',
  'help' => 'record',
  'timeclock' => 'record',
 

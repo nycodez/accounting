@@ -20,13 +20,13 @@
                 </a>
             </li>
             <li id="reports">
-                <a href="/reports">
+                <a href="/report">
                     <i class="icon-bar-chart"></i>
                     <span>Reports</span>
                 </a>
             </li>
             <li id="contacts">
-                <a class="dropdown-toggle" href="/contacts">
+                <a class="dropdown-toggle" href="/contact">
                     <i class="icon-group"></i>
                     <span>Contacts</span>
                     <i class="icon-chevron-down"></i>
@@ -37,7 +37,7 @@
                 </ul>
             </li>
             <li id="cal">
-                <a href="/events">
+                <a href="/event">
                     <i class="icon-calendar-empty"></i>
                     <span>Calendar</span>
                 </a>

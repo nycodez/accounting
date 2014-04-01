@@ -36,22 +36,50 @@ abstract class Model
 			$arr2 = array();
 		$arr1 = array('ifActive'=>true);
 		$arr = array_merge($arr1, $arr2);
-		$result = $this->db->Search($this->coll, $arr);
+		try
+		{
+			$result = $this->db->Search($this->coll, $arr);
+		}
+		catch(Exception $e)
+		{
+			pr($e->getMessage());
+		}
 		return $result;
 	}
 	public function get($id)
 	{
-		$result = $this->db->Get($this->coll, $id);
+		try
+		{
+			$result = $this->db->Get($this->coll, $id);
+		}
+		catch(Exception $e)
+		{
+			pr($e->getMessage());
+		}
 		return $result;
 	}
 	public function add($arr)
 	{
-		$result = $this->db->Put($this->coll, $arr);
+		try
+		{
+			$result = $this->db->Put($this->coll, $arr);
+		}
+		catch(Exception $e)
+		{
+			pr($e->getMessage());
+		}
 		return $result; //new id in $['_id']
 	}
 	public function save($arr)
 	{
-		$result = $this->db->Save($this->coll, $arr);
+		try
+		{
+			$result = $this->db->Save($this->coll, $arr);
+		}
+		catch(Exception $e)
+		{
+			pr($e->getMessage());
+		}
 		return $result;
 	}
 	public function getName($id)
@@ -72,49 +100,49 @@ abstract class Model
 		$r = $this->db->GetFile(new MongoId($id));
 		return $r;
 	}
-/*
-	public function getOne($id)
-	{
-		$r = $this->db->Get($this->coll, $id);
-		return $r;
-	}
-	public function deleteOne($id)
-	{
-		$r = $this->db->DeleteOneRecordById($this->coll, $id);
-		return $r;
-	}
-	public function addMany($arr)
-	{
-		$r = $this->db->PutOneRecord($this->coll, $arr);
-		return $r;
-	}
-	public function updateMany($arr)
-	{
-		$r = $this->db->SaveOneRecord($this->coll, $arr);
-		return $r;
-	}
-	public function getMany($arr)
-	{
-		$r = $this->db->GetAllRecordsBySearch($this->coll, $arr);
-		return $r;
-	}
-	public function deleteMany($arr)
-	{
-		$r = $this->db->DeleteOneRecordById($this->coll, $arr);
-		return $r;
-	}
+	/*
+	   public function getOne($id)
+	   {
+	   $r = $this->db->Get($this->coll, $id);
+	   return $r;
+	   }
+	   public function deleteOne($id)
+	   {
+	   $r = $this->db->DeleteOneRecordById($this->coll, $id);
+	   return $r;
+	   }
+	   public function addMany($arr)
+	   {
+	   $r = $this->db->PutOneRecord($this->coll, $arr);
+	   return $r;
+	   }
+	   public function updateMany($arr)
+	   {
+	   $r = $this->db->SaveOneRecord($this->coll, $arr);
+	   return $r;
+	   }
+	   public function getMany($arr)
+	   {
+	   $r = $this->db->GetAllRecordsBySearch($this->coll, $arr);
+	   return $r;
+	   }
+	   public function deleteMany($arr)
+	   {
+	   $r = $this->db->DeleteOneRecordById($this->coll, $arr);
+	   return $r;
+	   }
 
-	public function defaultModel()
-	{
-		$user = $_SESSION['uid'];
-		$r = $this->db->GetMine($this->coll, array('user'=>$user));
-		return $r;
-	}
-	public function recentlyViewed($limit = 2)
-	{
-		$r = $this->db->GetNewest($this->coll, $limit);
-		return $r;
-	}
+	   public function defaultModel()
+	   {
+	   $user = $_SESSION['uid'];
+	   $r = $this->db->GetMine($this->coll, array('user'=>$user));
+	   return $r;
+	   }
+	   public function recentlyViewed($limit = 2)
+	   {
+	   $r = $this->db->GetNewest($this->coll, $limit);
+	   return $r;
+	   }
 
-*/
+	 */
 }
